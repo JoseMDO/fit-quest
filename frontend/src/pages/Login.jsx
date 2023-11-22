@@ -3,7 +3,16 @@ import Google from "../img/google.png"
 import Github from "../img/github.png"
 // import Facebook from "../img/facebook.png"
 
+
+
+
 const Login = () => {
+
+  const github = () => {
+    window.open("http://localhost:3000/auth/github", "_self");
+  };
+
+
   return (
   <div name="home" className='h-screen w-full font-raleway overflow-hidden bg-gradient-to-b from-[#ffffff] via-[#ffffff] to-[#A0FFE3] text-white dark:bg-gradient-to-b  dark:from-[#000000] dark:via-[#000000] dark:to-[#323232] dark:text-white'>
     <div className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row'>
@@ -26,7 +35,7 @@ const Login = () => {
           <img src={Google} className='mr-4' alt="google"/>
           <p>Login With Google</p>
         </div>
-        <div className='flex justify-center items-center p-8 rounded-lg text-2xl bg-slate-600 h-16 w-3/4 mb-10 hover:cursor-pointer'>
+        <div className='flex justify-center items-center p-8 rounded-lg text-2xl bg-slate-600 h-16 w-3/4 mb-10 hover:cursor-pointer' onClick={github}>
         <img src={Github} className='mr-4' alt="google"/>
           <p>Login with GitHub</p>
         </div>
